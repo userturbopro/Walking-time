@@ -32,4 +32,10 @@ if (isRaining) {
     minutes = 20;
     console.log('Хорошая погода! Время прогулки: ' + minutes);
   }
+
+  // нет обработки этих случаев:
+  if (temperature < 10 || temperature > 35) {
+    minutes = 0;
+    // По ТЗ: "В остальных случаях я никуда не выхожу"
+  }
 }
