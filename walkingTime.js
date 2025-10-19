@@ -36,6 +36,31 @@ if (isRaining) {
   // нет обработки этих случаев:
   if (temperature < 10 || temperature > 35) {
     minutes = 0;
+    console.log('Сижу дома, гуляю ' + minutes + ' минут');
     // По ТЗ: "В остальных случаях я никуда не выхожу"
+  }
+}
+
+// Улучшенная версия
+
+if (isRaining) {
+  minutes = 0;
+  console.log('Идет дождь! Время прогулки: ' + minutes);
+} else {
+  if (temperature >= 10 && temperature < 15) {
+    minutes = 30;
+  } else if (temperature >= 15 && temperature < 25) {
+    minutes = 40;
+  } else if (temperature >= 25 && temperature <= 35) {
+    minutes = 20;
+  } else {
+    minutes = 0; // очень холодно или очень жарко
+  }
+  console.log(minutes)
+  // Один вывод для всех "не дождливых" случаев
+  if (minutes > 0) {
+    console.log('Хорошая погода! Время прогулки: ' + minutes);
+  } else {
+    console.log('Сегодня не гуляем: слишком холодно или жарко');
   }
 }
