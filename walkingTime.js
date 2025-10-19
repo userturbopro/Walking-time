@@ -64,3 +64,19 @@ if (isRaining) {
     console.log('Сегодня не гуляем: слишком холодно или жарко');
   }
 }
+// ещё один вариант
+
+if (isRaining) {
+  console.log('Идет дождь! Время прогулки: 0');
+} else if (temperature >= 10 && temperature < 15) {
+  minutes = 30;
+  console.log('Хорошая погода! Время прогулки: ' + minutes);
+} else if (temperature >= 15 && temperature < 25) {
+  minutes = 40;
+  console.log('Хорошая погода! Время прогулки: ' + minutes);
+} else if (temperature >= 25 && temperature <= 35) {
+  minutes = 20;
+  console.log('Хорошая погода! Время прогулки: ' + minutes);
+} else {
+  console.log('Сегодня не гуляем: слишком холодно или жарко');
+}
